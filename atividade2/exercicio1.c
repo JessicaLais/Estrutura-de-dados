@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char* argv[]){
+int somaArray(int arra[], int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += arra[i];
+    }
+    return soma;
+}
 
-    int v[10];
-    *v = 1;
-
-    printf("%d", v[5]);
-
-    int *v1 = {5, 11, 3};
-
+int main() {
+    int array[] = {10,5,6,8};
+    int tamanho = sizeof(array)/sizeof(array[0]);
     
-
-    /*for(int i = 0, int i < sizeof[v1]/sizeof ,i++ ){
-        v1[i] > v1[i+1];
-    }*/
-
-return 0;
+    int resultado = somaArray(array,tamanho);
+    
+    printf("Soma dos numeros do array: %d\n", resultado);
+    
+    return 0;
 }
